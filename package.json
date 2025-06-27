@@ -1,5 +1,5 @@
 {
-  "name": "mcp-cli",
+  "name": "mcp-custom-command-line",
   "version": "0.0.1",
   "main": "lib/index.js",
   "engines": {
