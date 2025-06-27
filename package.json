@@ -33,7 +33,7 @@
     "@rushstack/node-core-library": "^5.13.1",
     "@types/node": "^24.0.3",
     "@types/yargs": "^17.0.24",
-    "eslint": "^8.57.0",
+    "eslint": "^9.29.0",
     "typescript": "^5.8.3"
   }
 }
