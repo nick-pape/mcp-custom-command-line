@@ -31,8 +31,8 @@ importers:
         specifier: ^0.73.6
         version: 0.73.6(@types/node@24.0.4)
       '@rushstack/heft-lint-plugin':
-        specifier: ^0.6.0
-        version: 0.6.1(@rushstack/heft@0.73.6(@types/node@24.0.4))(@types/node@24.0.4)
+        specifier: ^0.7.0
+        version: 0.7.0(@rushstack/heft@0.73.6(@types/node@24.0.4))(@types/node@24.0.4)
       '@rushstack/heft-typescript-plugin':
         specifier: ^0.9.7
         version: 0.9.8(@rushstack/heft@0.73.6(@types/node@24.0.4))(@types/node@24.0.4)
@@ -147,8 +147,8 @@ packages:
     resolution: {integrity: sha512-TGpJ+Jviw+xAzd5ZAjJJl3YczC66HTcuD9wm6M6i4AFFM6Pu4eN7iOVJDLZL4lb8MJtpLsmLAZbf6I859ak3Bg==}
     engines: {node: '>=10.13.0'}
 
-  '@rushstack/heft-lint-plugin@0.6.1':
-    resolution: {integrity: sha512-u7sGl8YOg2xQtDoE0IocMUvrGTirmCmKcqnPj+h8Fa3FSgv2VOVQFijpz0d0mT7ptQHpnyufh5CoihvuIz7SWA==}
+  '@rushstack/heft-lint-plugin@0.7.0':
+    resolution: {integrity: sha512-hGokJd9zBVktUBPXU8+xfg8VzfxNkh7dnDOydWoELN2Ws0OjAEX6zrD/ZY+rBzkMH1SrZ1SxOWnzd3FpgH13Aw==}
     peerDependencies:
       '@rushstack/heft': 0.74.0
 
@@ -1614,10 +1614,11 @@ snapshots:
     transitivePeerDependencies:
       - '@types/node'
 
-  '@rushstack/heft-lint-plugin@0.6.1(@rushstack/heft@0.73.6(@types/node@24.0.4))(@types/node@24.0.4)':
+  '@rushstack/heft-lint-plugin@0.7.0(@rushstack/heft@0.73.6(@types/node@24.0.4))(@types/node@24.0.4)':
     dependencies:
       '@rushstack/heft': 0.73.6(@types/node@24.0.4)
       '@rushstack/node-core-library': 5.13.1(@types/node@24.0.4)
+      json-stable-stringify-without-jsonify: 1.0.1
       semver: 7.5.4
     transitivePeerDependencies:
       - '@types/node'
