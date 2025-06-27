@@ -1,0 +1,14 @@
+{
+    "servers": {
+        "mcp-cli": {
+            "type": "stdio",
+            "command": "node",
+            "cwd": "${workspaceFolder}/",
+            "args": [
+                "lib/index.js",
+                "--config",
+                "{\"version\":\"1.0\",\"commands\":[{\"name\":\"echo\",\"description\":\"Echo a message to the console\",\"command\":\"echo\",\"arguments\":[{\"name\":\"message\",\"description\":\"The message to echo\",\"type\":\"string\",\"required\":true}]}]}"
+            ]
+        }
+    }
+}

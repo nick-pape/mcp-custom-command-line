@@ -1,0 +1,53 @@
+{
+  "$schema": "./src/config-schema.json",
+  "version": "1.0",
+  "commands": [
+    {
+      "name": "echo",
+      "description": "Echo a message to the console",
+      "command": "echo",
+      "arguments": [
+        {
+          "name": "message",
+          "description": "The message to echo",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "list-files",
+      "description": "List files in a directory",
+      "command": "dir",
+      "arguments": [
+        {
+          "name": "path",
+          "description": "The directory path to list",
+          "type": "string",
+          "required": false,
+          "defaultValue": "."
+        }
+      ]
+    },
+    {
+      "name": "ping",
+      "description": "Ping a host to test connectivity",
+      "command": "ping",
+      "arguments": [
+        {
+          "name": "host",
+          "description": "The hostname or IP address to ping",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "count",
+          "description": "Number of ping packets to send",
+          "type": "number",
+          "required": false,
+          "defaultValue": 4
+        }
+      ]
+    }
+  ]
+}

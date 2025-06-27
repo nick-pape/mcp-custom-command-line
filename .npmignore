@@ -1,0 +1,10 @@
+# Ignore everything by default
+*
+
+# Then whitelist the files/folders we want to include
+!package.json
+!pnpm-lock.yaml
+!lib/
+!lib/**
+!examples/**
+!bin/**

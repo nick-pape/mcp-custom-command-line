@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MCP CLI Configuration",
+  "description": "Configuration schema for MCP CLI command definitions",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "JSON Schema reference URL"
+    },
+    "version": {
+      "type": "string",
+      "default": "1.0",
+      "description": "Configuration schema version"
+    },
+    "commands": {
+      "type": "array",
+      "minItems": 1,
+      "description": "List of command line tools to expose via MCP",
+      "items": {
+        "$ref": "#/definitions/CommandLineEntry"
+      }
+    }
+  },
+  "required": ["commands"],
+  "additionalProperties": false,
+  "definitions": {
+    "CommandLineEntry": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Unique name for the command"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Description of what the command does"
+        },
+        "command": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The shell command to execute"
+        },
+        "arguments": {
+          "type": "array",
+          "default": [],
+          "description": "List of arguments the command accepts",
+          "items": {
+            "$ref": "#/definitions/CommandArgument"
+          }
+        }
+      },
+      "required": ["name", "description", "command"],
+      "additionalProperties": false
+    },
+    "CommandArgument": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Name of the argument"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Description of the argument"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["string", "number", "boolean"],
+          "default": "string",
+          "description": "Data type of the argument"
+        },
+        "required": {
+          "type": "boolean",
+          "default": false,
+          "description": "Whether this argument is required"
+        },
+        "defaultValue": {
+          "oneOf": [
+            { "type": "string" },
+            { "type": "number" },
+            { "type": "boolean" }
+          ],
+          "description": "Default value for the argument if not provided"
+        }
+      },
+      "required": ["name", "description"],
+      "additionalProperties": false
+    }
+  }
+}
